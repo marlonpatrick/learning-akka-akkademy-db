@@ -1,13 +1,8 @@
 package com.akkademy.exercises.chapter01;
 
 import akka.actor.AbstractActor;
-import akka.actor.ActorRef;
 import akka.event.Logging;
 import akka.event.LoggingAdapter;
-import com.akkademy.message.SetRequest;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class LastMessageReminder extends AbstractActor {
 

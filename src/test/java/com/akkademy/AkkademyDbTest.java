@@ -4,7 +4,7 @@ import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 import akka.actor.Props;
 import akka.testkit.TestActorRef;
-import com.akkademy.message.SetRequest;
+import com.akkademy.messages.SetRequest;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
