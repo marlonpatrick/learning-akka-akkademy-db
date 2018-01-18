@@ -1,14 +1,12 @@
-package com.akkademy.chapter01;
+package com.akkademy.exercises.chapter01;
 
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 import akka.actor.Props;
 import akka.testkit.TestActorRef;
-import com.akkademy.exercises.chapter01.LastMessageReminder;
-import com.akkademy.exercises.chapter01.StoreMessageRequest;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class LastMessageReminderTest  {
 
@@ -16,6 +14,7 @@ public class LastMessageReminderTest  {
 
     @Test
     public void itShouldStoreMessageFromStoreMessage() {
+
         TestActorRef<LastMessageReminder> actorRef = TestActorRef.create(system, Props.create(LastMessageReminder.class));
 
         actorRef.tell(new StoreMessageRequest("Some message"), ActorRef.noSender());
