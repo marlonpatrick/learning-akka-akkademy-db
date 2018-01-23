@@ -1,4 +1,4 @@
-package com.akkademy;
+package com.akkademy.server;
 
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;

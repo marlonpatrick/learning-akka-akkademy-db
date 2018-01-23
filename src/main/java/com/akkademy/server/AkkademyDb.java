@@ -1,4 +1,4 @@
-package com.akkademy;
+package com.akkademy.server;
 
 import akka.actor.AbstractActor;
 import akka.actor.Status;
@@ -46,7 +46,11 @@ public class AkkademyDb extends AbstractActor {
                         sender().tell(value, self());
                     }
                 })
-                .matchAny(message -> sender().tell(new Status.Failure(new UnknowMessageException(message)), self()))
+                .matchAny(message -> {
+                    log.info("Received unknown message – {}", message);
+
+                    sender().tell(new Status.Failure(new UnknowMessageException(message)), self());
+                })
                 .build();
     }
 }

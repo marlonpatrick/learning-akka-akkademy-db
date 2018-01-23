@@ -19,6 +19,6 @@ libraryDependencies += "com.typesafe.akka" %% "akka-remote" % akkaVersion
 
 mappings in (Compile, packageBin) ~= {
   _.filterNot {
-    case (_, name) => Seq("application.conf").contains(name)
+    case (_, name) => Seq("server-application.conf").contains(name)
   }
 }
