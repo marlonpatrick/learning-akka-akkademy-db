@@ -10,6 +10,9 @@ public class AkkademyClientIntegrationTest {
     @Test
     public void itShouldSetRecord() throws Exception {
         AkkademyClient client = new AkkademyClient("127.0.0.1:25520");
+
+        Integer result2 = (Integer) ((CompletableFuture<Object>) client.get("123")).get();
+
         client.set("123", 123);
         Integer result = (Integer) ((CompletableFuture<Object>) client.get("123")).get();
         assert (result.equals(123));
