@@ -14,7 +14,8 @@ import java.util.concurrent.TimeUnit;
 
 public class ResponseActorTest {
 
-    public static void main(String[] args) {
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+	public static void main(String[] args) {
 
         ActorSystem system = ActorSystem.create();
 

@@ -81,8 +81,6 @@ public class TellDemoArticleParser extends AbstractActor {
                         })
                         .matchAny(t -> {
                             System.out.println("ignoring msg: " + t.getClass());
-
-                            pipe();
                         })
                         .build();
             }
